@@ -2,8 +2,8 @@
   &__section-title {
     margin-bottom: 48px;
 
-    @include onDesktop {
-    margin-bottom: 56px;
+    @include on-desktop {
+      margin-bottom: 56px;
     }
   }
 
@@ -11,13 +11,14 @@
     display: grid;
     row-gap: 40px;
     justify-items: stretch;
-    @include maintainColumnCount;
 
-    @include onTablet {
+    @include maintain-column-count;
+
+    @include on-tablet {
       justify-items: center;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       justify-items: stretch;
     }
   }
@@ -25,11 +26,11 @@
   &__product-card {
     grid-column: span 2;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: span 6;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 4;
     }
   }

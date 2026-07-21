@@ -2,7 +2,7 @@
   &__info {
     grid-column: 1 / -1;
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 8;
     }
   }
@@ -13,24 +13,24 @@
     width: 100%;
     height: 100%;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: span 4;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 8;
     }
 
     &--square {
-      height: 0%;
+      height: 0;
       width: 100%;
       padding-bottom: 100%;
 
-      @include onTablet {
+      @include on-tablet {
         grid-column: span 2;
       }
 
-      @include onDesktop {
+      @include on-desktop {
         grid-column: span 4;
       }
     }
@@ -42,8 +42,8 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
-    @include hover(transform, scale(1.05));
 
+    @include hover(transform, scale(1.05));
   }
 
   &__title {
@@ -51,23 +51,25 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 140%;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   &__description {
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    letter-spacing: 0px;
+    letter-spacing: 0;
   }
 
   &__section {
     display: grid;
-    @include maintainColumnCount;
+
+    @include maintain-column-count;
+
     row-gap: 16px;
     margin-bottom: 40px;
 
-    @include onTablet {
+    @include on-tablet {
       margin-bottom: 48px;
     }
   }
@@ -75,10 +77,11 @@
   &__explore-button {
     max-width: 278px;
 
-    @include onTablet {
+    @include on-tablet {
       max-width: 392px;
     }
-    @include onDesktop {
+
+    @include on-desktop {
       max-width: 324px;
     }
   }
