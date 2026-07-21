@@ -1,0 +1,36 @@
+.compare {
+  &__section-title {
+    margin-bottom: 48px;
+
+    @include onDesktop {
+    margin-bottom: 56px;
+    }
+  }
+
+  &__products {
+    display: grid;
+    row-gap: 40px;
+    justify-items: stretch;
+    @include maintainColumnCount;
+
+    @include onTablet {
+      justify-items: center;
+    }
+
+    @include onDesktop {
+      justify-items: stretch;
+    }
+  }
+
+  &__product-card {
+    grid-column: span 2;
+
+    @include onTablet {
+      grid-column: span 6;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+    }
+  }
+}

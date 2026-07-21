@@ -1,0 +1,39 @@
+.product-card {
+
+  &__link {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    @include hover(transform, scale(1.1));
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0px;
+  }
+
+  &__price::before {
+    content: '$';
+  }
+}

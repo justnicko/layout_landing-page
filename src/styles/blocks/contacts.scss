@@ -1,0 +1,31 @@
+.contacts {
+  &__content {
+    display: grid;
+    @include maintainColumnCount;
+    row-gap: 48px;
+  }
+  
+  &__contact-form {
+    grid-column: span 2;
+
+    @include onTablet {
+      grid-column: span 3;
+    }
+
+    @include onDesktop {
+      grid-column: span 5;
+    }
+  }
+
+  &__contact-details {
+    grid-column: span 2;
+
+    @include onTablet {
+      grid-column: span 3;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / 11;
+    }
+  }
+}
